@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Admin View | FCIT Help Desk</title>
+
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+
+    <!-------------stylesheet ------------------>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/admin.css"
+      media="only screen and (min-width:901px)"
+    />
+
+    <!-------------Fav-Icon------------------>
+    <link
+      rel="icon"
+      href="/static/images/favicon.ico"
+      type="image/gif"
+      sizes="16x16"
+    />
+
+    <!-------------google-fonts ------------------>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato&family=Open+Sans+Condensed:wght@300&family=Source+Code+Pro&family=Ubuntu+Condensed&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato&family=Open+Sans+Condensed:wght@300&family=Source+Code+Pro&family=Ubuntu+Condensed&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+ <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script> 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    
+  </head>
+
+  {% if messages %} {% for message in messages %}
+  <div
+    class="alert alert-{{ message.tags }} alert-dismissible fade show py-2 my-0"
+    role="alert"
+  >
+    <strong>{{ message }}</strong>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  {% endfor %} {% endif %}
+
+  <body>
+    <!--------------------------HEADER-------------------------------->
+    <div id="particles-js">
+      <div class="mainCourse">
+        <div class="navbarCourses-container">
+          <div class="navbarCourses">
+            <div class="logocoursescontainer">
+              <a href="/home" class="logotext"
+                ><span class="logospan">FCIT </span> HelpDesk</a
+              >
+            </div>
+
+            <div class="navMenuCoursesMain">
+              <ul class="navmenucourses">
+                <li>
+                  <a href="/home" target="_blank"
+                    >home</a
+                  >
+                </li>
+                <li><a href="/about/{{user.id}}">About</a></li>
+                <li><a href="/courses/{{user.id}}">courses</a></li>
+                <li><a href="/team/{{user.id}}">Team</a></li>
+                <li><a href="/socialmedia/{{user.id}}">Updates</a></li>
+                <li><a href="/contact/{{user.id}}">contact</a></li>
+                <li><a href="/contribute/{{user.id}}">contribute</a></li>
+                <li>
+                  <div class="dropdownCourse">
+                    <button
+                      class="dropdownMenuButton btn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      {{user.first_name}}
+                    </button>
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <a
+                        class="dropdown-item-Courses"
+                        href="/userProfile/{{user.id}}"
+                        selected
+                        >My Profile</a
+                      >
+                      <a
+                        class="dropdown-item-Courses"
+                        href="/adminSite/{{user.id}}"
+                        id="adminPanel"
+                        style="display: none"
+                        >Go to Admin Panel</a
+                      >
+                      <a class="dropdown-item-Courses" href="/logout"
+                        >Log out</a
+                      >
+                    </div>
+                  </div>
+                </li>
+            </ul>
+            </div>
+
+          
+          </div>
+        </div>
+
+      
+
+        <div class="cardsContainer container-fluid p-4">
+          <h4 class="text-danger card border border-danger py-3 mx-1 my-4">Welcome to FCIT Help Desk Admin-Panel</h4>
+          <div class="card mx-1 my-3 border border-danger container-fluid py-3">
+            <h4 class="p-2 text-warning">STATISTICS @FCIT Help Desk</h4>
+            <div class="jumbotron">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card border-info mx-sm-1 p-3 shadow rounded">
+                    <div class="card border-info shadow text-info p-3 my-card"><span class="fa fa-users"
+                        aria-hidden="true"></span></div>
+                    <div class="text-info text-center mt-3">
+                      <h4>Total Registered PUCITians</h4>
+                    </div>
+                    <div class="text-info text-center mt-2">
+                      <h1>{{Total_registered_users}}</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card border-success mx-sm-1 p-3 shadow rounded">
+                    <div class="card border-success shadow text-success p-3 my-card"><span class="fa fa-eye"
+                        aria-hidden="true"></span></div>
+                    <div class="text-success text-center mt-3">
+                      <h4>Active PUCITians</h4>
+                    </div>
+                    <div class="text-success text-center mt-2">
+                      <h1>{{Total_Active_users}}</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card border-danger mx-sm-1 p-3 shadow rounded">
+                    <div class="card border-danger shadow text-danger p-3 my-card"><span class="fa fa-heart"
+                        aria-hidden="true"></span>
+                    </div>
+                    <div class="text-danger text-center mt-3">
+                      <h4>Contacted</h4>
+                    </div>
+                    <div class="text-danger text-center mt-2">
+                      <h1>{{Total_Contacts}}</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card mx-1 my-3 border border-danger container-fluid py-3 my-5">
+            <h4 class="p-2 text-warning">Active PUCITian's Data</h4>
+            <table class="table bg-secondary border border-success">
+              <thead class="bg-success text-light">
+                <tr>
+                  <th scope="col-2">#</th>
+                  <th scope="col-2">Full Name</th>
+                  <th scope="col-6">College ID</th>
+                  <th scope="col-2">Designation</th>
+                  <th scope="col-2"></th>
+                </tr>
+              </thead>
+              <tbody class=" text-secondary bg-light" id="tableHeight">
+                {% for i in Display_Users %}
+                <tr>
+                  <th scope="row" class="col-1"> {{ forloop.counter }}</th>
+                  <td class="col-2">{{i.first_name}} {{i.last_name}}</td>
+                  <td class="col-3">{{i.email}}</td>
+                  <td class="col-2">{{i.designation}}</td>
+                  <td class="col-4">
+                  {% comment %} <a type="button" href="/userProfileEditAdmin/{{i.id}}" class="btn btn-warning m-1">Edit</a> {% endcomment %}
+                    {% comment %} <a href="/delete/{{i.id}}" class="btn btn-danger">Delete</a> {% endcomment %}
+                  </td>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+  
+          <div class="card mx-1 my-3 border border-danger container-fluid py-3 my-5">
+            <h4 class="p-2 text-warning">Contacts Made</h4>
+            <table class="table bg-secondary border border-success">
+              <thead class="bg-success text-light">
+                <tr>
+                  <th scope="col-2">#</th>
+                  <th scope="col-2">Full Name</th>
+                  <th scope="col-2">Message</th>
+                  <th scope="col-2"></th>
+                </tr>
+              </thead> 
+              <tbody class=" text-secondary bg-light">
+                {% for i in Contacted_Users %}
+                <tr>
+                  <th scope="row">{{i.id}}</th>
+                  <td>{{i.first_name}} {{i.last_name}}</td>
+                  <td>{{i.message}}</td>
+                  <td class="col-3">
+                  {% comment %} <a type="button" href="/userProfileEditAdmin/{{i.id}}" class="btn btn-warning m-1">Edit</a>
+                    <a href="/userProfileEditAdmin/{{i.id}}" class="btn btn-danger">Delete</a> {% endcomment %}
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+  
+        </div>
+
+
+        </div>
+    </div>
+  </body>
+
+  
+  <script>
+    if ("{{user.designation}}" == "Editor") {
+      document.getElementById("adminPanel").style.display = "block";
+    }
+  </script>
+  <script type="text/javascript" src="/static/js/main.js"></script>
+  <script type="text/javascript" src="/static/js/particles.js"></script>
+  <script type="text/javascript" src="/static/js/app.js"></script>
+</html>
+
+
+
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Admin Portal</title>
+    {% include 'base/baseHead.html'%}
+    
+<link rel="stylesheet" href="/static/css/custom.css" />
+<link rel="stylesheet" href="/static/css/stylesheet.css" />
+<link rel="stylesheet" href="/static/css/bootstrap.css" />
+<link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.bundle.min.js"></script>
+
+</head>
+    {% include 'base/alertMessage.html'%}
+
+    
+
+<body>
+  <!--------------------------HEADER-------------------------------->
+  <div id="particles-jss" style="height: 250vh;" >
+    <div class="mainWWAdmin" >
+
+      <div class="navbarAdmin">
+        <img src="/static/images/favicon.ico" alt="" class="mainLogoNavbarAdmin">
+        <a href="/home" class="logoScrollAdmin">FCIT Help Desk</a>
+        <!-- -----------------------MENU-BAR---------------------------- -->
+        <ul class="navMenuAdmin navMenuScrollAdmin ">
+          <li><a href="/home" target="_blank">home</a></li>
+          <li><a href="/courses/{{user.id}}">courses</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/register">Registration</a></li>
+          <li><a href="/contact/{{user.id}}">contact</a></li>
+        </ul>
+      </div>
+
+
+    <!-- drop down -->
+    <div class="logoutUserContainerAdmin">
+      <div class="dropdown logoutUser">
+        <button class="btn btnDropDown btn-secondary border border-light rounded  bg-warning dropdown-toggle"
+          type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{user.first_name}}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="/userProfile/{{user.id}}" selected>My Profile</a>
+          <a class="dropdown-item" href="/adminSite/{{user.id}}" id="adminPanel" style="display:none;" >Go to Admin Panel</a>
+          <a class="dropdown-item" href="/logout">Log out</a>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      if ('{{user.designation}}' == 'Editor'){
+        document.getElementById("adminPanel").style.display = 'block';
+      }
+    </script>
+
+
+
+      <div class="cardsContainer container-fluid p-4">
+        <h4 class="text-danger card border border-danger py-3 mx-1 my-4">Welcome to FCIT Help Desk Admin-Panel</h4>
+        <div class="card mx-1 my-3 border border-danger container-fluid py-3">
+          <h4 class="p-2 text-warning">STATISTICS @FCIT Help Desk</h4>
+          <div class="jumbotron">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card border-info mx-sm-1 p-3 shadow rounded">
+                  <div class="card border-info shadow text-info p-3 my-card"><span class="fa fa-users"
+                      aria-hidden="true"></span></div>
+                  <div class="text-info text-center mt-3">
+                    <h4>Total Registered PUCITians</h4>
+                  </div>
+                  <div class="text-info text-center mt-2">
+                    <h1>{{Total_registered_users}}</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card border-success mx-sm-1 p-3 shadow rounded">
+                  <div class="card border-success shadow text-success p-3 my-card"><span class="fa fa-eye"
+                      aria-hidden="true"></span></div>
+                  <div class="text-success text-center mt-3">
+                    <h4>Active PUCITians</h4>
+                  </div>
+                  <div class="text-success text-center mt-2">
+                    <h1>{{Total_Active_users}}</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card border-danger mx-sm-1 p-3 shadow rounded">
+                  <div class="card border-danger shadow text-danger p-3 my-card"><span class="fa fa-heart"
+                      aria-hidden="true"></span>
+                  </div>
+                  <div class="text-danger text-center mt-3">
+                    <h4>Contacted</h4>
+                  </div>
+                  <div class="text-danger text-center mt-2">
+                    <h1>{{Total_Contacts}}</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mx-1 my-3 border border-danger container-fluid py-3 my-5">
+          <h4 class="p-2 text-warning">Active PUCITian's Data</h4>
+          <table class="table bg-secondary border border-success">
+            <thead class="bg-success text-light">
+              <tr>
+                <th scope="col-2">#</th>
+                <th scope="col-2">Full Name</th>
+                <th scope="col-6">College ID</th>
+                <th scope="col-2">Designation</th>
+                <th scope="col-2">Actions</th>
+              </tr>
+            </thead>
+            <tbody class=" text-secondary bg-light" id="tableHeight">
+              {% for i in Display_Users %}
+              <tr>
+                <th scope="row" class="col-1"> {{ forloop.counter }}</th>
+                <td class="col-2">{{i.first_name}} {{i.last_name}}</td>
+                <td class="col-3">{{i.email}}</td>
+                <td class="col-2">{{i.designation}}</td>
+                <td class="col-4">
+                <a type="button" href="/userProfileEditAdmin/{{i.id}}" class="btn btn-warning m-1">Edit</a>
+                  <a href="/delete/{{i.id}}" class="btn btn-danger">Delete</a>
+                </td>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card mx-1 my-3 border border-danger container-fluid py-3 my-5">
+          <h4 class="p-2 text-warning">Contacts Made</h4>
+          <table class="table bg-secondary border border-success">
+            <thead class="bg-success text-light">
+              <tr>
+                <th scope="col-2">#</th>
+                <th scope="col-2">Full Name</th>
+                <th scope="col-2">Message</th>
+                <th scope="col-2">Actions</th>
+              </tr>
+            </thead> 
+            <tbody class=" text-secondary bg-light">
+              {% for i in Contacted_Users %}
+              <tr>
+                <th scope="row">{{i.id}}</th>
+                <td>{{i.first_name}} {{i.last_name}}</td>
+                <td>{{i.message}}</td>
+                <td class="col-3">
+                <a type="button" href="/userProfileEditAdmin/{{i.id}}" class="btn btn-warning m-1">Edit</a>
+                  <a href="/userProfileEditAdmin/{{i.id}}" class="btn btn-danger">Delete</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+
+
+  <script type="text/javascript" src="/static/js/main.js"></script>
+  <script type="text/javascript" src="/static/js/particles.js"></script>
+  <script type="text/javascript" src="/static/js/app copy.js"></script>
+
+
+</body>
+
+</html> {% endcomment %}

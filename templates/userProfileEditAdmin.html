@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <title>Admin Edit  | FCIT Help Desk</title>
+    
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+    
+    <!-------------stylesheet ------------------>
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/css/stylesheet.css"
+    media="only screen and (min-width:901px)"
+    />
+    
+    <!-------------Fav-Icon------------------>
+    <link
+    rel="icon"
+      href="/static/images/favicon.ico"
+      type="image/gif"
+      sizes="16x16"
+    />
+
+    <!-------------google-fonts ------------------>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato&family=Open+Sans+Condensed:wght@300&family=Source+Code+Pro&family=Ubuntu+Condensed&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato&family=Open+Sans+Condensed:wght@300&family=Source+Code+Pro&family=Ubuntu+Condensed&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+ <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script> 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    
+  </head>
+
+  {% if messages %} {% for message in messages %}
+  <div
+    class="alert alert-{{ message.tags }} alert-dismissible fade show py-2 my-0"
+    role="alert"
+  >
+    <strong>{{ message }}</strong>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  {% endfor %} {% endif %}
+
+  <body>
+    <!--------------------------HEADER-------------------------------->
+    <div id="particles-js">
+      <div class="mainCourse">
+        <div class="navbarCourses-container">
+          <div class="navbarCourses">
+            <div class="logocoursescontainer">
+              <a href="/home" class="logotext"
+                ><span class="logospan">FCIT </span> HelpDesk</a
+              >
+            </div>
+
+            <div class="navMenuCoursesMain">
+              <ul class="navmenucourses">
+                <li>
+                  <a href="/home" target="_blank"
+                    >home</a
+                  >
+                </li>
+                <li><a href="/about/{{user.id}}"  >About</a></li>
+                <li><a href="/courses/{{user.id}}">courses</a></li>
+                <li><a href="/team/{{user.id}}" style="color: #00adb5">Team</a></li>
+                <li><a href="/socialmedia/{{user.id}}">Updates</a></li>
+                <li><a href="/contact/{{user.id}}">contact</a></li>
+                <li><a href="/contribute/{{user.id}}">contribute</a></li>
+                <li>
+                  <div class="dropdownCourse">
+                    <button
+                      class="dropdownMenuButton btn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      {{user.first_name}}
+                    </button>
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <a
+                        class="dropdown-item-Courses"
+                        href="/userProfile/{{user.id}}"
+                        selected
+                        >My Profile</a
+                      >
+                      <a
+                        class="dropdown-item-Courses"
+                        href="/adminSite/{{user.id}}"
+                        id="adminPanel"
+                        style="display: none"
+                        >Go to Admin Panel</a
+                      >
+                      <a class="dropdown-item-Courses" href="/logout"
+                        >Log out</a
+                      >
+                    </div>
+                  </div>
+                </li>
+            </ul>
+            </div>
+
+          
+          </div>
+        </div>
+
+
+
+        {% comment %}  {% endcomment %}
+
+        <h4 style="margin:70px 30px auto 10px !important;"  class="text-danger text-center card border border-danger py-3 mx-2 my-5">{{user.first_name}}
+          {{user.last_name}} 's Profile (Admin Edit Mode)</h4>
+      </div>
+  
+    </div>
+  
+    </div>
+  
+  
+    <div class="profileContainer" id="qqqq">
+  
+      <div class="Profileleft ProfileleftEdit">
+        <div class="profilePicContainer">
+  
+          <div class="PicContainer">
+            {% if user.profile_pic %}
+            <img id="updateForm" src="{{user.profile_pic.url}}" alt="Editing">
+            {% else %}
+            <img src="/media/users/default-avatar.png" alt="img"> 
+            {% endif %}
+          </div>
+        </div>
+  
+        <div class="NameProfileContainer">
+          <div class="card my-5 text-center mx-5">
+            <div class="card-body ipContainerEdit py-2">
+              <p>{{user.first_name}} {{user.last_name}}</p>
+            </div>
+          </div>
+  
+  
+        </div>
+      </div>
+  
+  
+      <div class="ProfilebtnContainer">
+        <button type="submit" form="myForm" class="btn btn-success m-2">Update</a></button>
+      </div>
+  
+      <div class="ProfileRight">
+        <div class="headerProfile">
+  
+          <div class="headProfileContainer">
+            <!-- <p>Student's Data</p> -->
+          </div>
+  
+  
+  
+        </div>
+  
+        <div class="profileRightBody">
+          <!-- input box-1 USERNAME -->
+        <form  method="post"  action="/updateUserDataAdmin/{{user.id}}/" id="myForm" enctype="multipart/form-data">
+          {% csrf_token %} 
+          {{ form.as_p }}
+            <div class="card my-2 mx-3">
+              <div class="card-body ipContainerEdit py-2 px-4">
+                <span>First Name</span>
+                <input type="text" id="fname" name="fname" aria-label="First name" class="form-control text-danger"
+                  value={{user.first_name}} placeholder="First Name" required disabled>
+              </div>
+            </div>
+  
+            <div class="card my-2 mx-3">
+              <div class="card-body ipContainerEdit py-2 px-4">
+                <span>Last Name</span>
+                <input type="text" id="lname" name="lname" aria-label="Last name" class="form-control text-danger"
+                  value={{user.last_name}} placeholder="Last Name" required disabled>
+              </div>
+            </div>
+  
+  
+            <div class="card my-2 mx-3">
+              <div class="card-body ipContainerEdit py-2 px-4">
+                <span>E-mail</span>
+                <input type="text" id="email" name="email" aria-label="Email" class="form-control" value={{user.email}}
+                  placeholder="First Name" disabled>
+              </div>
+            </div>
+  
+            <div class="card my-2 mx-3">
+              <div class="card-body ipContainerEdit py-2 px-4">
+                <span>Designation (is {{user.designation}})</span> 
+                <select class="form-select" name="joinas"  id="inputGroupSelect01" required>
+                    <option value="none" selected={{user.designation}}>Choose...</option>
+                    <option value="User">Regular User</option>
+                    <option value="Contributor">Contributor</option>
+                    <option value="Editor">Editor</option>
+                </select>
+              </div>
+            </div>
+  
+            <div class="card my-2 mx-3">
+              <div class="card-body ipContainerEdit py-2 px-4">
+                <span>Password</span>
+                <input type="text" id="password" name="password" aria-label="First name" class="form-control text-danger"
+                  value="*****" placeholder="Update your Password" required disabled>
+              </div>
+            </div>
+  
+          </form>
+  
+        </div>
+  
+  
+  
+      </div>
+    </div>
+  
+  
+  
+
+        {% comment %}  {% endcomment %}
+    
+        
+        <script>        
+          if ("{{user.designation}}" == "Editor") {
+            document.getElementById("adminPanel").style.display = "block";
+          }
+        </script>
+     
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="/static/js/main.js"></script>
+  <script type="text/javascript" src="/static/js/particles.js"></script>
+  <script type="text/javascript" src="/static/js/app.js"></script>
+</html>
+

@@ -1,0 +1,245 @@
+:root {
+    --DarkBlue: #ffbb00;
+    --dark1: #222831;
+    --dark2: #393e46;
+    --primary: #00adb5;
+    --body: #eeeeee;
+  
+    --Lato: "Lato", sans-serif;
+    --fontBodyVaro: "Arvo", serif;
+    --condensed: "Open Sans Condensed", sans-serif;
+    --sourceCode: "Source Code Pro", monospace;
+    --ubuntu: "Ubuntu", sans-serif;
+    --ubuntuCondensed: "Ubuntu Condensed", sans-serif;
+    --Ralweway: "Raleway", sans-serif;
+  
+    --marquee-width: 80vw;
+    --marquee-height: 30vh;
+    --marquee-elements: 5; /*defined with JavaScript*/
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(
+      var(--marquee-width) / var(--marquee-elements-displayed)
+    );
+    --marquee-animation-duration: calc(var(--marquee-elements) * 6s);
+  }
+  
+  /* 
+  
+  
+  */
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 1.2px;
+    /* overflow: hidden; */
+    font-family: "Raleway", monospace;
+  }
+  body,
+  html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 1.2px;
+    /* overflow: hidden; */
+    font-family: "Raleway", monospace;
+  }
+  
+  /* particle background */
+  #particles-js {
+    position: relative;
+    /* background-image: linear-gradient(
+        rgba(3, 38, 43, 0.885),
+        rgba(0, 27, 41, 0.713)
+      ),
+      url(../images/pu_oc.png); */
+    background-color: var(--dark1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
+    min-height: 200vh;
+  }
+  
+  /* Course */
+  
+  .mainCourse {
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .navbarCourses-container {
+    display: flex;
+    justify-content: center;
+  }
+  .navbarCourses {
+    width: 80%;
+    display: flex;
+    height: 10vh;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logocoursescontainer {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding-left: 40px; */
+  }
+  
+  .logocourses {
+    display: flex;
+    height: 35px;
+  }
+  
+  .logotext {
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    /* margin-left: 20px; */
+  }
+  
+  .logospan {
+    color: var(--primary);
+    padding-right: 3px;
+  }
+  
+  .navMenuCoursesMain {
+    display: flex;
+    height: 100%;
+    width: 70%;
+  }
+  
+  .navmenucourses {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .navmenucourses li {
+    display: flex;
+    list-style-type: none;
+    /* margin-left: 0 10px; */
+    padding: 0 10px;
+  }
+  
+  .navmenucourses li a {
+    text-transform: capitalize;
+    display: flex;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s;
+  }
+  
+  .navmenucourses li a:hover {
+    color: var(--primary);
+  }
+  
+  /* dropdown - courses */
+  
+  .dropdownMenuButton {
+    padding: 5px 20px;
+    background-color: var(--primary) !important;
+    width: fit-content !important;
+    border: none;
+    color: var(--body) !important;
+    border-radius: 5px;
+  }
+  
+  .dropdown-menu {
+    color: var(--primary) !important;
+    background-color: #003343 !important;
+  }
+  
+  .dropdown-item-Courses {
+    color: var(--body);
+  }
+  .dropdown-item-Courses:hover {
+    border: none !important;
+  }
+  
+  .center-items {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .center-items-container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .tagline-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tagline {
+    display: flex;
+    color: var(--body);
+    font-weight: 600;
+    font-size: 2.4rem;
+  }
+  
+  .username-tagline {
+    color: var(--primary);
+  }
+  
+  .introlines-container {
+    display: flex;
+    width: 50%;
+  }
+  
+  .introlines {
+    padding: 20px 0;
+    display: flex;
+    text-align: center;
+    letter-spacing: 1.2px;
+    color: var(--primary);
+  }
+  .explore-btn-container {
+    display: flex;
+    text-align: center;
+  }
+  
+  .explore-btn {
+    text-align: center;
+    height: 40px;
+    width: 125px;
+    letter-spacing: 1.3px;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    background-color: var(--primary);
+    color: var(--body);
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  
+  .explore-btn:hover {
+    /* border: 2px solid var(--body); */
+    color: var(--body);
+    background-color: #03848a;
+  }
+  

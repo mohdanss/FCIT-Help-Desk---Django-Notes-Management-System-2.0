@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Welcome to FCIT Help Desk</title>
+
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+
+    <!-------------mobile viewport------------------>
+    <meta
+      name="viewport"
+      content="width=devide-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0"
+    />
+
+    <!-------------stylesheet ------------------>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/home.css"
+      media="only screen and (min-width:901px)"
+    />
+
+    <!-------------Fav-Icon------------------>
+    <link
+      rel="icon"
+      href="/static/images/favicon.ico"
+      type="image/gif"
+      sizes="16x16"
+    />
+
+    <!-------------google-fonts ------------------>
+   
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    /> 
+
+    
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    /> 
+  </head>
+
+  {% if messages %} {% for message in messages %}
+  <div
+    class="alert alert-{{ message.tags }} alert-dismissible fade show my-0 py-2"
+    role="alert"
+  >
+    <strong>{{ message }}</strong>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  {% endfor %} {% endif %}
+  {% comment %} <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/home.css" />
+    <!-- <link rel="stylesheet" href="static/css/login.css" /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>FCIT | Welcome</title>
+    <link
+    rel="icon"
+    href="/static/images/favicon.ico"
+    type="image/gif"
+    sizes="16x16"
+  />
+
+  
+  </head>
+
+ {% endcomment %}
+
+  
+  <body>
+    <div id="particles-js">
+      <div class="welcome-wrapper">
+        <div class="welcome-container">
+          <div class="logo-container">
+            <span class="logo-title">FCIT </span
+            ><span class="logo-text"> help desk.</span>
+          </div>
+          <div class="center-items">
+            <div class="il-container">
+              <img
+                src="static/images/svgs/welcome-c.svg"
+                alt="welcome-svg"
+                srcset=""
+              />
+            </div>
+            <div class="btn-container">
+              <a href="/login">
+                <button class="loginbtn login">login</button>
+              </a>
+              <a href="/register">
+                <button class="loginbtn register">register</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="/static/js/main.js"></script>
+  <script type="text/javascript" src="/static/js/particles.js"></script>
+  <script type="text/javascript" src="/static/js/app.js"></script>
+</html>

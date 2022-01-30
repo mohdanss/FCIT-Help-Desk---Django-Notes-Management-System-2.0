@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Courses | FCIT Help Desk</title>
+
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+
+    <!-------------stylesheet ------------------>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/courses.css"
+      media="only screen and (min-width:901px)"
+    />
+
+    <!-------------Fav-Icon------------------>
+    <link
+      rel="icon"
+      href="/static/images/favicon.ico"
+      type="image/gif"
+      sizes="16x16"
+    />
+
+    <!-------------google-fonts ------------------>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato&family=Open+Sans+Condensed:wght@300&family=Source+Code+Pro&family=Ubuntu+Condensed&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato&family=Open+Sans+Condensed:wght@300&family=Source+Code+Pro&family=Ubuntu+Condensed&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  {% if messages %} {% for message in messages %}
+  <div
+    class="alert alert-{{ message.tags }} alert-dismissible fade show py-2 my-0"
+    role="alert"
+  >
+    <strong>{{ message }}</strong>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  {% endfor %} {% endif %}
+
+  <body>
+    <!--------------------------HEADER-------------------------------->
+    <div id="particles-js">
+      <div class="mainCourse">
+        <div class="navbarCourses-container">
+          <div class="navbarCourses">
+            <div class="logocoursescontainer">
+              <a href="/home" class="logotext"
+                ><span class="logospan">FCIT </span> HelpDesk</a
+              >
+            </div>
+
+            <div class="navMenuCoursesMain">
+              <ul class="navmenucourses">
+                <li>
+                  <a href="/home" target="_blank">home</a>
+                </li>
+                <li><a href="/about">About</a></li>
+                <li>
+                  <a href="/courses/{{user.id}}" style="color: #00adb5"
+                    >courses</a
+                  >
+                </li>
+                <li><a href="/team/{{user.id}}">Team</a></li>
+                <li><a href="/socialmedia/{{user.id}}">Updates</a></li>
+                <li><a href="/contact/{{user.id}}">contact</a></li>
+                <li><a href="/contribute/{{user.id}}">contribute</a></li>
+                <li>
+                  <div class="dropdownCourse">
+                    <button
+                      class="dropdownMenuButton btn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      {{user.first_name}}
+                    </button>
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <a
+                        class="dropdown-item-Courses"
+                        href="/userProfile/{{user.id}}"
+                        selected
+                        >My Profile</a
+                      >
+                      <a
+                        class="dropdown-item-Courses"
+                        href="/adminSite/{{user.id}}"
+                        id="adminPanel"
+                        style="display: none"
+                        >Go to Admin Panel</a
+                      >
+                      <a class="dropdown-item-Courses" href="/logout"
+                        >Log out</a
+                      >
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="coursesNote">
+          <p>
+            Courses Available {% comment %}
+            <span> For Semester-{% block semNo %}{% endblock semNo %} </span> {%
+            endcomment %}
+          </p>
+
+          <p></p>
+        </div>
+        <script>
+          if ("{{user.designation}}" == "Editor") {
+            document.getElementById("adminPanel").style.display = "block";
+          }
+        </script>
+
+        {% comment %}
+        <button>
+          <a href="/contribute/{{user.id}}">Contribute Now!</a>
+        </button>
+        {% endcomment %}
+
+        <div class="courses-container">
+          <div class="courses-container-sub">
+            {% block course-1 %} {% endblock course-1 %} {% block course-2 %}
+            {%endblock course-2 %} {% block course-3 %} {% endblock course-3%} 
+            {%block course-4 %} {% endblock course-4 %} {% block course-5 %} 
+            {%endblock course-5 %} {% block course-6 %} {% endblock course-6 %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="/static/js/main.js"></script>
+  <script type="text/javascript" src="/static/js/particles.js"></script>
+  <script type="text/javascript" src="/static/js/app.js"></script>
+</html>

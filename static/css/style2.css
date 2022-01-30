@@ -1,0 +1,306 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", monospace;
+
+  letter-spacing: 1.1px;
+}
+
+:root {
+  --dark_1: #222831;
+  --dark_2: #393e46;
+  --primary: #00adb5;
+  --body: #eeeeee;
+  --ff: "Raleway", monospace;
+}
+
+.cgpa-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--dark_2);
+}
+
+.cgpa-container {
+  height: 100vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark-navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+.cgpa-logo-container {
+  width: 35%;
+  font-size: 25px;
+  font-family: var(--ff);
+  font-weight: bold;
+}
+
+.cgpa-logo-title {
+  color: var(--primary);
+}
+
+.cgpa-logo-text {
+  color: var(--body);
+}
+
+.nav-menu-container {
+  width: 65%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navmenu {
+  display: flex;
+}
+
+.nav {
+  border: 2px solid yellow;
+  display: flex;
+}
+
+.dark-navitem {
+  margin: 0 0 0 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  height: 100%;
+  list-style-type: none;
+  padding: 5px 10px;
+  color: var(--body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+.dark-navitem:hover {
+  color: #00adb5;
+}
+
+.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+.cgpa-head-container {
+  border-top: 2px solid var(--dark_1);
+  border-bottom: 2px solid var(--dark_1);
+  display: flex;
+  width: 100%;
+  margin-top: 5vh;
+}
+
+.cgpa-head {
+  display: flex;
+  font-size: 1.1em;
+  padding: 5px 0 5px 5px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  color: var(--primary);
+}
+
+.cgpa-center-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-subj-form {
+  margin: 2vh 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  background-color: var(--dark_1);
+}
+
+.select-sub-label {
+  color: var(--body);
+  font-size: 1.3rem;
+  padding: 10px 0 0 0;
+}
+
+.inner-select-subj {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  border: 1px solid var(--primary);
+}
+
+.inner-select-subj input {
+  background-color: var(--dark_1);
+  outline: none;
+  border: none;
+  height: 40px;
+  padding: 5px 10px;
+  color: var(--body);
+  font-size: 15px;
+  width: 70%;
+  box-shadow: 0px 1px 5px #094736;
+}
+
+.select-sub input:focus {
+  color: var(--body);
+}
+
+.select-subj-btn {
+  height: 40px;
+  width: 30%;
+  border: none;
+  background-color: var(--primary);
+  cursor: pointer;
+  transition: all 0.5s;
+  font-weight: 500;
+  color: var(--body);
+}
+
+.select-subj-btn:hover {
+  background-color: #004347;
+}
+
+.form-subj-table {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+tbody,
+thead {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+tr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00adb5;
+  border-bottom: 2px solid var(--dark_2);
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.h_1,
+.d_1 {
+  min-width: 10%;
+}
+
+.d_2,
+.d_3,
+.d_4,
+.h_2,
+.h_3,
+.h_4,
+.d_2,
+.d_3,
+.d_4 {
+  width: 30%;
+  border-left: 1px solid var(--dark_2);
+}
+
+.table,
+tr,
+th {
+  text-align: center;
+  color: var(--body);
+  letter-spacing: 1px;
+}
+
+.table-input-field {
+  background-color: var(--dark_1);
+  outline: none;
+  border: none;
+  height: 30px;
+  width: 80%;
+  padding: 5px 10px;
+  color: var(--body);
+  font-size: 15px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.table-input-field:focus {
+  box-shadow: 1px 1px 5px #004347;
+  color: var(--body);
+}
+
+thead tr {
+  background-color: var(--dark_1);
+}
+
+table {
+  box-shadow: 1px 1px 10px #004347;
+}
+
+.calc-gpa-btn-container {
+  margin-top: 5vh;
+  border-top: 2px solid var(--dark_1);
+  border-bottom: 2px solid var(--dark_1);
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--dark_1);
+}
+
+.calc-cgpa-btn {
+  display: flex;
+  padding: 5px 10px;
+  text-align: center;
+  background-color: var(--primary);
+  border: none;
+  font-size: 15px;
+  margin: 5px;
+  border-radius: 2px;
+  color: var(--body);
+  cursor: pointer;
+}
+
+.calculated-gpa {
+  display: flex;
+  padding: 10px 20px;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 2vh;
+  background-color: var(--body);
+  border-radius: 5px;
+}
+
+/* ---------------------- */
+/* ---------------------- */
+/* ---------------------- */
+
+/* calculate gpa/cgpa*/

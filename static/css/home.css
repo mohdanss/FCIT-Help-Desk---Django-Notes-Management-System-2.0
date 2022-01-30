@@ -1,0 +1,250 @@
+:root {
+    --DarkBlue: #ffbb00;
+    --dark1: #222831;
+    --dark2: #393e46;
+    --primary: #00adb5;
+    --body: #eeeeee;
+  
+    --Lato: "Lato", sans-serif;
+    --fontBodyVaro: "Arvo", serif;
+    --condensed: "Open Sans Condensed", sans-serif;
+    --sourceCode: "Source Code Pro", monospace;
+    --ubuntu: "Ubuntu", sans-serif;
+    --ubuntuCondensed: "Ubuntu Condensed", sans-serif;
+    --Ralweway: "Raleway", sans-serif;
+  }
+  
+  body,
+  html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', monospace;
+    letter-spacing: 1.2px;
+    /* overflow: hidden; */
+  }
+  
+  /* particle background */
+  #particles-js {
+    position: relative;
+    background-color: var(--dark1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* ======================== Header ============================ */
+  }
+  
+  /* ========= login STARTS here ==========  */
+  
+  .mainLogin {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    flex-direction: column;
+  }
+  
+  .logoLogin {
+    margin-top: 3vh;
+  }
+  .logotext {
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    /* margin-left: 20px; */
+  }
+  
+  .logospan {
+    color: var(--primary);
+    padding-right: 5px;
+  }
+  
+  .logoRegl:hover {
+    color: white;
+  }
+  
+  
+  
+  .mainFormContainer{
+      height: 100%;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .formLogin{
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--primary);
+      padding: 20px 30px;
+      border-radius: 5px 15px 5px 15px;
+      background: #014245aa;
+  }
+  .formSignup{
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--primary);
+      padding: 20px 30px;
+      border-radius: 5px 15px 5px 15px;
+      background: #014245aa;
+  }
+  
+  .loginHead{
+      display: flex;
+  
+  }
+  
+  .loginText{
+      display: flex;
+      color: white;
+      font-size: 1.4rem;
+      text-transform: capitalize;
+      font-family: 'Raleway', monospace;
+  }
+    
+  
+  .forgotpass{
+      display: flex;
+      color: var(--primary);
+  }
+  .resethere{
+      display: flex;
+      color: var(--body);
+      padding-left: 5px;
+  }
+
+  
+  
+.loginbtn {
+  text-align: center;
+  height: 40px;
+  width: 120px;
+  letter-spacing: 1.3px;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 500;
+  background-color: var(--primary);
+  color: var(--body);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.loginbtn:hover {
+  border: 2px solid var(--body);
+  color: var(--body);
+  background-color: transparent;
+}
+  
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", monospace;
+  }
+  
+  :root {
+    --dark_1: #222831;
+    --dark_2: #393e46;
+    --primary: #00adb5;
+    --body: #eeeeee;
+    --ff: "Raleway", monospace;
+  }
+  
+  /* Welcome page */
+  .welcome-wrapper {
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-image: linear-gradient(#020c20ec, #0a1922ee);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+  }
+  
+  .welcome-container {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo-container {
+    margin-top: 20px;
+    font-size: 25px;
+    font-family: var(--ff);
+    font-weight: bold;
+  }
+  
+  .logo-title {
+    color: var(--primary);
+  }
+  
+  .logo-text {
+    color: var(--body);
+  }
+  
+  .center-items {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .il-container {
+    width: 45vw;
+    margin: 10px 0px;
+  }
+  
+  .btn-container {
+    display: flex;
+    text-align: center;
+  }
+  
+  .btn {
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    letter-spacing: 1.3px;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    background-color: var(--primary);
+    color: var(--body);
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  
+  .btn:hover {
+    border: 2px solid var(--body);
+    color: var(--body);
+    background-color: transparent;
+  }
+  
+  .login {
+    margin-right: 30px;
+  }
+  /* Welcome page */

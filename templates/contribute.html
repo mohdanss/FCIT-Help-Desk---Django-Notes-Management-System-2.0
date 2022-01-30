@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Contribute Here! | FCIT Help Desk</title>
+
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+
+    <!-------------stylesheet ------------------>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/contribute.css"
+      media="only screen and (min-width:901px)"
+    />
+
+    <!-------------Fav-Icon------------------>
+    <link
+      rel="icon"
+      href="/static/images/favicon.ico"
+      type="image/gif"
+      sizes="16x16"
+    />
+
+    <!-------------google-fonts ------------------>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato&family=Open+Sans+Condensed:wght@300&family=Source+Code+Pro&family=Ubuntu+Condensed&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato&family=Open+Sans+Condensed:wght@300&family=Source+Code+Pro&family=Ubuntu+Condensed&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+ <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script> 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    
+  </head>
+
+  {% if messages %} {% for message in messages %}
+  <div
+    class="alert alert-{{ message.tags }} alert-dismissible fade show py-2 my-0"
+    role="alert"
+  >
+    <strong>{{ message }}</strong>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  {% endfor %} {% endif %}
+
+  <body>
+    <!--------------------------HEADER-------------------------------->
+    <div id="particles-js">
+      <div class="mainCourse">
+        <div class="navbarCourses-container">
+          <div class="navbarCourses">
+            <div class="logocoursescontainer">
+              <a href="/home" class="logotext"
+                ><span class="logospan">FCIT </span> HelpDesk</a
+              >
+            </div>
+
+            <div class="navMenuCoursesMain">
+                <ul class="navmenucourses">
+                    <li>
+                      <a href="/home" target="_blank"
+                        >home</a
+                      >
+                    </li>
+                    <li><a href="/about/{{user.id}}" >About</a></li>
+                    <li><a href="/courses/{{user.id}}">courses</a></li>
+                    <li><a href="/team/{{user.id}}">Team</a></li>
+                    <li><a href="/socialmedia/{{user.id}}">Updates</a></li>
+                    <li><a href="/contact/{{user.id}}"  style="color: #00adb5">contact</a></li>
+                    <li><a href="/contribute/{{user.id}}">contribute</a></li>
+                    <li>
+                      <div class="dropdownCourse">
+                        <button
+                          class="dropdownMenuButton btn dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          {{user.first_name}}
+                        </button>
+                        <div
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton"
+                        >
+                          <a
+                            class="dropdown-item-Courses"
+                            href="/userProfile/{{user.id}}"
+                            selected
+                            >My Profile</a
+                          >
+                          <a
+                            class="dropdown-item-Courses"
+                            href="/adminSite/{{user.id}}"
+                            id="adminPanel"
+                            style="display: none"
+                            >Go to Admin Panel</a
+                          >
+                          <a class="dropdown-item-Courses" href="/logout"
+                            >Log out</a
+                          >
+                        </div>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+
+          
+          </div>
+        </div>
+
+     <div class="contributeHead">
+        <p class="pg-1 py-0 my-0">| Contribute <span> Dear theetaa's </span>| </p>
+    </div>
+         <!-- sign up form -->
+         <div class="center-items">
+
+         <form action="/makeContribution/{{user.id}}/" class="formSignUp w-25 container-fluid formContact" id = "contributionForm" method="POST" enctype="multipart/form-data">
+            {% csrf_token %} 
+            {{ form.as_p }}
+                
+    
+                    <!-- login-logo theeta.com box -->
+    
+                    <div class="contributeHead">
+                        <p class="pg-1 py-0 my-0">| Contribute <span> Dear theetaa's </span>| </p>
+                    </div>
+    
+                    <div class="row">
+    
+                        <!-- name & reason container -->
+    
+                        <!-- input box-1 AUTHOR NAME -->
+    
+                        <div class="input-group shadow p-1 rounded bg-dark">
+                            <span class="input-group-text">
+                                <i class="far fa-at"></i>
+                            </span>
+    
+                            <!-- INPUT author_name-->
+                            <input type="text" aria-label="author_name" id="author_name" name="author_name" class="form-control" placeholder="Author-Name" required>
+    
+                        </div>
+    
+                        <div class="input-group shadow p-1 rounded bg-dark">
+                            <span class="input-group-text col-md-">
+                                <i class="far fa-book-reader"></i>
+                            </span>
+    
+                            <!-- INPUT Title -->
+                            <input type="text" aria-label="Title" id="title" name="title" class="form-control" placeholder="Title( e-g chapter-x)" required>
+                        </div>
+    
+    
+                        <!-- SELECT Course reason-->
+    
+                        <div class="input-group my-0 mb-0 shadow p-1 rounded bg-dark">
+                            <span class="input-group-text">
+                                <i class="fas fa-book"></i>
+                            </span>
+    
+                            <label class="input-group-text col-md-5" for="selectCourse">For course
+                            </label>
+    
+                            <!-- select options -->
+                            <select class="form-select" id="selectCourse" name="selectCourse"  required>
+                                <option selected>Choose...</option>
+                                <option value="ITC">ITC</option>
+                                <option value="EMT">EMT</option>
+                                <option value="Calculus-1">Calculus-1</option>
+                                <option value="Writing-Wrokshop">Writing-Wrokshop</option>
+                                <option value="Statistics">Statistics</option>
+                            </select>
+                        </div>
+    
+    
+                        <div class="input-group my-0 mb-0 shadow p-1 rounded bg-dark">
+                            <span class="input-group-text">
+                                <i class="fas fa-smile"></i>
+                            </span>
+    
+                            <label class="input-group-text col-md-5" for="selectContentType">contribute a/an
+                            </label>
+    
+    
+    
+    
+                            <!-- select options -->
+                            <select name="theItems" onchange="otherSelect()" class="form-select" id="otherBox" required>
+                                <option selected>Choose...</option>
+                                <option value="PDF Notes">PDF Notes</option>
+                                <option value="PDF Books">PDF Books</option>
+                                <option value="Link">Drive or other Link</option>
+                            </select>
+                        </div>
+    
+    <!-- PASTE LINK -->
+    
+                        <div class="input-group shadow p-1 rounded bg-dark" name="contrib_link_input" id="contrib_link_input"  style="visibility:;">
+                            <span class="input-group-text col-md-">
+                                <i class="far fa-link"></i>
+                            </span>
+    
+                            
+                            <input type="text" name="contrib_link" id="contrib_link" aria-label="Title" class="form-control" placeholder="Paste Your Link Here...">
+                        </div>
+    
+    <!-- UPLOAD  -->
+                        <div class="input-group my-0 mb-0 shadow p-1 rounded bg-dark" id="contrib_upload_input" style="visibility:;">
+                            <span class="input-group-text">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <input class="form-control form-control " id="formFileLg" type="file" name="contribution_file"/>
+                        </div>
+    
+    
+    
+                        <div class="form-group form-check py-1 my-2">
+    
+                            <label
+                                class="form-check-label my-0 text-center text-warning bg-dark px-3 py-2 tccontribue rounded"
+                                for="exampleCheck1">Will be added to list soon after approvel :)</label>
+                        </div>
+    
+                        <!-- send -->
+                        <div class="form-group form-check text-center my-0">
+    
+                            <!-- send message button -->
+                            <button type="submit" class="loginbtn" id="hover-btn-contact">Contribute</button>
+    
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        {% comment %} ----- {% endcomment %}
+        <script>
+          if ("{{user.designation}}" == "Editor") {
+            document.getElementById("adminPanel").style.display = "block";
+          }
+        </script>
+     
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="/static/js/main.js"></script>
+  <script type="text/javascript" src="/static/js/particles.js"></script>
+  <script type="text/javascript" src="/static/js/app.js"></script>
+</html>
+
